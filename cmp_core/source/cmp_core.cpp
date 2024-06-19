@@ -23,6 +23,7 @@
 
 #include "bc1_encode_kernel.h"
 #include "cpu_extensions.h"
+#include "cmp_core.h"
 
 enum SIMD_ENABLED_EXTENSIONS
 {

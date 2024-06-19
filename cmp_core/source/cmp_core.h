@@ -35,6 +35,10 @@
 #define CMP_CDECL
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 //====================================================================================
 // API Definitions for Core API
 //------------------------------------------------------------------------------------
@@ -209,5 +213,9 @@ int CMP_CDECL DecompressBlockBC5S(const unsigned char cmpBlock[16], char srcBloc
 //========================================================================================
 int CMP_CDECL CompressBlockBC6(const unsigned short* srcBlock, unsigned int srcStrideInShorts, unsigned char cmpBlock[16], const void* options CMP_DEFAULTNULL);
 int CMP_CDECL DecompressBlockBC6(const unsigned char cmpBlock[16], unsigned short srcBlock[48], const void* options CMP_DEFAULTNULL);
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
 
 #endif  // CMP_CORE
