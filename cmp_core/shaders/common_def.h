@@ -33,6 +33,8 @@
 #ifndef CMP_COMMON_DEFINITIONS_H
 #define CMP_COMMON_DEFINITIONS_H
 
+#include "cmp_core.h"
+
 //#define USE_CMP_FIDELITY_FX_H
 
 // Proxy ISPC compiler (Warning! Not all ASPM features will be available : expect build errors for specialized ASPM code!

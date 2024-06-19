@@ -271,7 +271,7 @@ int CMP_CDECL CompressBlockBC5(const CGU_UINT8*     srcBlockR,
                                const CGU_UINT8*     srcBlockG,
                                unsigned int         srcStrideInBytes2,
                                CMP_GLOBAL CGU_UINT8 cmpBlock[16],
-                               const void*          options = NULL)
+                               const void*          options)
 {
     CGU_UINT8 inBlockR[16];
 
@@ -319,7 +319,7 @@ int CMP_CDECL CompressBlockBC5(const CGU_UINT8*     srcBlockR,
 int CMP_CDECL DecompressBlockBC5(const CGU_UINT8      cmpBlock[16],
                                  CMP_GLOBAL CGU_UINT8 srcBlockR[16],
                                  CMP_GLOBAL CGU_UINT8 srcBlockG[16],
-                                 const void*          options = NULL)
+                                 const void*          options)
 {
     CMP_BC15Options* BC15options = (CMP_BC15Options*)options;
     CMP_BC15Options  BC15optionsDefault;
@@ -339,7 +339,7 @@ int CMP_CDECL CompressBlockBC5S(const CGU_INT8*      srcBlockR,
                                 const CGU_INT8*      srcBlockG,
                                 unsigned int         srcStrideInBytes2,
                                 CMP_GLOBAL CGU_UINT8 cmpBlock[16],
-                                const void*          options = NULL)
+                                const void*          options)
 {
     CGU_INT8 inBlockR[16];
 
@@ -388,7 +388,7 @@ int CMP_CDECL CompressBlockBC5S(const CGU_INT8*      srcBlockR,
 int CMP_CDECL DecompressBlockBC5S(const CGU_UINT8     cmpBlock[16],
                                   CMP_GLOBAL CGU_INT8 srcBlockR[16],
                                   CMP_GLOBAL CGU_INT8 srcBlockG[16],
-                                  const void*         options = NULL)
+                                  const void*         options)
 {
     CMP_BC15Options* BC15options = (CMP_BC15Options*)options;
     CMP_BC15Options  BC15optionsDefault;

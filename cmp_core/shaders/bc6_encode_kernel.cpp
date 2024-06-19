@@ -4365,7 +4365,7 @@ int CMP_CDECL SetSignedBC6(void* options, CGU_BOOL sf16)
 int CMP_CDECL CompressBlockBC6(const CGU_UINT16*      srcBlock,
                                unsigned int           srcStrideInShorts,
                                CMP_GLOBAL CGU_UINT8   cmpBlock[16],
-                               const CMP_GLOBAL void* options = NULL)
+                               const CMP_GLOBAL void* options)
 {
     CGU_UINT16 inBlock[48] = {};
 
@@ -4410,7 +4410,7 @@ int CMP_CDECL CompressBlockBC6(const CGU_UINT16*      srcBlock,
     return CGU_CORE_OK;
 }
 
-int CMP_CDECL DecompressBlockBC6(const unsigned char cmpBlock[16], CGU_UINT16 srcBlock[48], const void* options = NULL)
+int CMP_CDECL DecompressBlockBC6(const unsigned char cmpBlock[16], CGU_UINT16 srcBlock[48], const void* options)
 {
     BC6H_Encode* BC6HEncode = (BC6H_Encode*)options;
     BC6H_Encode  BC6HEncodeDefault;

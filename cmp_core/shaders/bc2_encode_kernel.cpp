@@ -167,7 +167,7 @@ void DecompressBC2_Internal(CMP_GLOBAL CGU_UINT8 rgbaBlock[BLOCK_SIZE_4X4X4], co
 int CMP_CDECL CompressBlockBC2(const unsigned char*     srcBlock,
                                unsigned int             srcStrideInBytes,
                                CMP_GLOBAL unsigned char cmpBlock[16],
-                               CMP_GLOBAL const void*   options = NULL)
+                               CMP_GLOBAL const void*   options)
 {
     CMP_Vec4uc inBlock[16];
 
@@ -200,7 +200,7 @@ int CMP_CDECL CompressBlockBC2(const unsigned char*     srcBlock,
     return CGU_CORE_OK;
 }
 
-int CMP_CDECL DecompressBlockBC2(const unsigned char cmpBlock[16], CMP_GLOBAL unsigned char srcBlock[64], const void* options = NULL)
+int CMP_CDECL DecompressBlockBC2(const unsigned char cmpBlock[16], CMP_GLOBAL unsigned char srcBlock[64], const void* options)
 {
     CMP_BC15Options* BC15options = (CMP_BC15Options*)options;
     CMP_BC15Options  BC15optionsDefault;
